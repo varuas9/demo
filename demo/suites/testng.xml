@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1" parallel="tests">
+
+    <test name="classes">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="firstTest"/>
+        </classes>
+    </test>
+
+    <test name="packages">
+        <parameter name="browser" value="chrome" />
+        <packages>
+            <package name="progressBar.*"/>
+        </packages>
+    </test>
+</suite>
