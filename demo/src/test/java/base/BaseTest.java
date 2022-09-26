@@ -42,7 +42,8 @@ public class BaseTest {
         System.out.println("inside base test driverSetup");
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
+//        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
         return driver;
     }
