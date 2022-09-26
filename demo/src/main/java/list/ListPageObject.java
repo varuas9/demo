@@ -8,14 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class listPageObject {
+public class ListPageObject {
 
     private final String baseUrl = "https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html";
     listWebElements elements;
     List<String> days = new ArrayList<>();
 
-    public listPageObject(WebDriver driver){
-        elements = new listPageObject.listWebElements(driver);
+    public ListPageObject(WebDriver driver){
+        elements = new ListPageObject.listWebElements(driver);
     }
 
     public void goTolistPage(WebDriver driver) {

@@ -1,17 +1,13 @@
-import base.baseTest;
-import elements.textBox;
+import base.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import utils.seleniumUtils;
-import utils.waitUtils;
+import utils.WaitUtils;
 
-public class actionTests extends baseTest {
+public class ActionTests extends BaseTest {
 
     Actions actions;
 
@@ -38,11 +34,11 @@ public class actionTests extends baseTest {
         WebElement cars = driver.findElement(By.xpath("//a[contains(text(),'Cars Module')]"));
 
         actions.moveToElement(dropDown).perform();
-        waitUtils.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
         actions.moveToElement(mainFeatures).perform();
-        waitUtils.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
         actions.moveToElement(flights).perform();
-        waitUtils.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
         actions.moveToElement(cars).perform();
     }
 
@@ -59,7 +55,7 @@ public class actionTests extends baseTest {
         actions.keyUp(Keys.CONTROL);
         actions.perform();
 
-        waitUtils.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
 
         //copy
         actions.keyDown(Keys.CONTROL);
@@ -68,11 +64,11 @@ public class actionTests extends baseTest {
         actions.perform();
 
         //TAB
-        waitUtils.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
         actions.sendKeys(Keys.TAB);
         actions.perform();
 
-        waitUtils.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
 
         //paste
         actions.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).perform();

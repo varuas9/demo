@@ -1,10 +1,9 @@
-import base.baseTest;
+import base.BaseTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-import utils.waitUtils;
+import utils.WaitUtils;
 
-public class locatorTest extends baseTest {
+public class LocatorTest extends BaseTest {
 
     @Test
     public void test() throws InterruptedException {
@@ -42,7 +41,7 @@ public class locatorTest extends baseTest {
         //by classname
         driver.get("https://www.google.com/");
         driver.findElement(By.name("q")).sendKeys("selenium");
-        waitUtils.waitForElement(driver,driver.findElement(By.className("gNO89b")),5);
+        WaitUtils.waitForElement(driver,driver.findElement(By.className("gNO89b")),5);
         driver.findElement(By.className("gNO89b")).click();
     }
 }

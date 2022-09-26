@@ -1,16 +1,13 @@
-import base.baseTest;
+import base.BaseTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import utils.seleniumUtils;
-import utils.waitUtils;
+import utils.SeleniumUtils;
+import utils.WaitUtils;
 
 import java.util.ArrayList;
 
-public class remainingTests extends baseTest {
+public class RemainingTests extends BaseTest {
 
     @BeforeClass
     public void setup() {
@@ -30,7 +27,7 @@ public class remainingTests extends baseTest {
         driver.findElement(By.id("windowButton")).click();
         ArrayList<String> windows = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(windows.get(1));
-        waitUtils.waitForSeconds(2);
+        WaitUtils.waitForSeconds(2);
         driver.close();
     }
 
@@ -44,7 +41,7 @@ public class remainingTests extends baseTest {
 //        driver.switchTo().alert().accept();
 //        //driver.switchTo().alert().dismiss();
 
-        seleniumUtils.scrollToElement(driver,driver.findElement(By.id("promtButton")));
+        SeleniumUtils.scrollToElement(driver,driver.findElement(By.id("promtButton")));
         driver.findElement(By.id("promtButton")).click();
         driver.switchTo().alert().sendKeys("test123");
         driver.switchTo().alert().accept();

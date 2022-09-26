@@ -1,22 +1,21 @@
 package elements;
 
-import base.baseTest;
-import org.openqa.selenium.JavascriptExecutor;
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import utils.seleniumUtils;
+import utils.SeleniumUtils;
 
-public class textBoxTest extends baseTest {
+public class TextBoxTest extends BaseTest {
 
-    textBox obj;
-    textBox.textBoxElements elements;
+    TextBox obj;
+    TextBox.textBoxElements elements;
 
     @BeforeClass
     public void setup(){
         super.setup();
-        obj = new textBox(driver);
-        elements = new textBox.textBoxElements(driver);
+        obj = new TextBox(driver);
+        elements = new TextBox.textBoxElements(driver);
         obj.goToTextBox(driver);
     }
 
@@ -30,7 +29,7 @@ public class textBoxTest extends baseTest {
 
 //        JavascriptExecutor js = ((JavascriptExecutor) driver);
 //        js.executeScript("arguments[0].scrollIntoView(true);",elements.submit);
-        seleniumUtils.scrollToElement(driver,elements.submit);
+        SeleniumUtils.scrollToElement(driver,elements.submit);
         elements.submit.click();
 
         Assert.assertTrue(elements.displayedName.getText().contains("myname"));

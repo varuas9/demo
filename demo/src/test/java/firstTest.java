@@ -1,11 +1,10 @@
-import base.baseTest;
+import base.BaseTest;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 //public class firstTest {
-public class firstTest extends baseTest {
+public class firstTest extends BaseTest {
     private final String baseUrl = "https://demoqa.com/";
 
     @Test

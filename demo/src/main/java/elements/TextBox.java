@@ -1,19 +1,18 @@
 package elements;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utils.seleniumUtils;
+import utils.SeleniumUtils;
 
-public class textBox {
+public class TextBox {
 
     private final String baseUrl = "https://demoqa.com/text-box";
     textBoxElements elements;
 
 
-    public textBox(WebDriver driver) {
+    public TextBox(WebDriver driver) {
         elements = new textBoxElements(driver);
     }
 
@@ -27,7 +26,7 @@ public class textBox {
         elements.currentAddress.sendKeys("current address");
         elements.permanentAddress.sendKeys("permanent address");
 
-        seleniumUtils.scrollToElement(driver, elements.submit);
+        SeleniumUtils.scrollToElement(driver, elements.submit);
         elements.submit.click();
     }
 

@@ -5,14 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class progressBar {
+public class ProgressBar {
 
     private final String baseUrl="https://demoqa.com/progress-bar";
 
-    progressBar.progressBarElements elements;
+    ProgressBar.progressBarElements elements;
 
-    public progressBar(WebDriver driver){
-        elements = new progressBar.progressBarElements(driver);
+    public ProgressBar(WebDriver driver){
+        elements = new ProgressBar.progressBarElements(driver);
     }
 
     public void goToprogressBar(WebDriver driver){

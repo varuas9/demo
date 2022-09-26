@@ -2,19 +2,19 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
 
-public class baseTest {
+public class BaseTest {
 
     public WebDriver driver;
 
     public void setup() {
         String browserValue = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browser"); //extracts the value of parameter passed from testng.xml
 //      System.out.println("browser is: "+ value);
-//       this.driver = driverSetup();
-        multipleBrowserSetup(browserValue);
+       this.driver = driverSetup();
+//        multipleBrowserSetup(browserValue);
         driver.manage().window().maximize();
         System.out.println("inside base test");
     }
@@ -38,12 +38,14 @@ public class baseTest {
         return driver;
     }
 
-/*    public WebDriver driverSetup(){
+    public WebDriver driverSetup(){
         System.out.println("inside base test driverSetup");
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        WebDriver driver = new ChromeDriver(options);
         return driver;
-    }*/
+    }
 
 
   /*  @AfterClass

@@ -1,6 +1,6 @@
 package list;
 
-import base.baseTest;
+import base.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -9,13 +9,13 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
-import utils.waitUtils;
+import utils.WaitUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class listTest extends baseTest {
+public class ListTest extends BaseTest {
 
     List expectedValues = new ArrayList();
     Actions actions;
@@ -88,7 +88,7 @@ public class listTest extends baseTest {
             driver.findElement(By.xpath("//*[@id=\"multi-select\"]/option["+i+"]")).click();
             actions.release();
         }
-        waitUtils.waitForSeconds(3);
+        WaitUtils.waitForSeconds(3);
         select.deselectAll();
     }
 
@@ -101,7 +101,7 @@ public class listTest extends baseTest {
         for(WebElement element : options){
             element.click();
         }
-        waitUtils.waitForSeconds(3);
+        WaitUtils.waitForSeconds(3);
         select.deselectAll();
     }
 }

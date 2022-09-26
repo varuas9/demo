@@ -1,8 +1,0 @@
-list\listPageObject$listWebElements.class
-progressBar\progressBar.class
-elements\textBox.class
-elements\textBox$textBoxElements.class
-progressBar\progressBar$progressBarElements.class
-utils\seleniumUtils.class
-utils\waitUtils.class
-list\listPageObject.class
