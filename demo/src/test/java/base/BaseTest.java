@@ -16,7 +16,7 @@ public class BaseTest {
 //      System.out.println("browser is: "+ value);
        this.driver = driverSetup();
 //        multipleBrowserSetup(browserValue);
-//        driver.manage().window().maximize();
+        driver.manage().window().maximize();
         System.out.println("inside base test");
     }
 
@@ -42,11 +42,7 @@ public class BaseTest {
     public WebDriver driverSetup(){
         System.out.println("inside base test driverSetup");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-maximized"); // open Browser in maximized mode
-        options.addArguments("disable-infobars"); // disabling infobars
-        options.addArguments("--disable-extensions"); // disabling extensions
-        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-        options.addArguments("--no-sandbox"); // Bypass OS security model
+//        options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         WebDriver driver = new ChromeDriver(options);
