@@ -18,7 +18,7 @@ public class ActionTests extends BaseTest {
     }
 
     @Test (priority = 2)
-    public void dragTest(){
+    public void dragDropTest(){
         driver.get("https://demoqa.com/droppable/");
         WebElement source = driver.findElement(By.id("draggable"));
         WebElement destination = driver.findElement(By.id("droppable"));
