@@ -7,7 +7,7 @@
 <!--        <parameter name="browser" value="edge"/>-->
         <classes>
             <class name="FirstTest"/>
-            <class name="ActionTests"/>
+<!--            <class name="ActionTests"/>-->
         </classes>
     </test>
 
