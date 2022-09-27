@@ -17,7 +17,7 @@ public class ActionTests extends BaseTest {
         actions = new Actions(driver);
     }
 
-    @Test (priority = 2)
+    @Test
     public void dragDropTest(){
         driver.get("https://demoqa.com/droppable/");
         WebElement source = driver.findElement(By.id("draggable"));
@@ -25,7 +25,7 @@ public class ActionTests extends BaseTest {
         actions.dragAndDrop(source,destination).perform();
     }
 
-    @Test (priority = 1)
+    /*@Test (priority = 1)
     public void mouseHover(){
         driver.get("https://phptravels.com/demo/");
         WebElement dropDown = driver.findElement(By.xpath("//span[text()='Features']"));
@@ -40,7 +40,7 @@ public class ActionTests extends BaseTest {
         actions.moveToElement(flights).perform();
         WaitUtils.waitForSeconds(2);
         actions.moveToElement(cars).perform();
-    }
+    }*/
 
     /*@Test
     public void copyPaste(){

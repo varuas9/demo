@@ -50,8 +50,8 @@ public class BaseTest {
     }
 
 
-    @AfterClass
+ /*   @AfterClass
     public void closeBrowser(){
         driver.close();
-     }
+     }*/
 }
