@@ -42,7 +42,7 @@ public class ActionTests extends BaseTest {
         actions.moveToElement(cars).perform();
     }
 
-    @Test
+    /*@Test
     public void copyPaste(){
         driver.get("https://demoqa.com/text-box");
         WebElement currentAddress = driver.findElement(By.id("currentAddress"));
@@ -72,6 +72,6 @@ public class ActionTests extends BaseTest {
 
         //paste
         actions.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).perform();
-    }
+    }*/
 
 }
