@@ -4,11 +4,10 @@
 <suite name="suite1" parallel="tests">
 
     <test name="classes">
-        <parameter name="browser" value="edge"/>
+<!--        <parameter name="browser" value="edge"/>-->
         <classes>
             <class name="FirstTest"/>
             <class name="ActionTests"/>
-            <class name="RemainingTests"/>
         </classes>
     </test>
 
