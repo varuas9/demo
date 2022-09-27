@@ -45,7 +45,8 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--no-sandbox");
         options.addArguments("--headless");
-        options.addArguments("--remote-debugging-port=9222");
+        options.addArguments("--remote-debugging-port=9444");
+        options.addArguments("--window-size=1920,1080");
         WebDriver driver = new ChromeDriver(options);
         return driver;
     }
