@@ -43,14 +43,13 @@ public class BaseTest {
         System.out.println("inside base test driverSetup");
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
-//        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+//        options.addArguments("--headless");
+        options.addArguments("--disable-dev-shm-usage");
 //        options.addArguments("--remote-debugging-port=9222");
         WebDriver driver = new ChromeDriver(options);
         return driver;
     }
-
 
     @AfterClass
     public void closeBrowser(){
