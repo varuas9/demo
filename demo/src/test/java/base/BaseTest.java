@@ -41,10 +41,11 @@ public class BaseTest {
 
     public WebDriver driverSetup(){
         System.out.println("inside base test driverSetup");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-//        options.addArguments("--no-sandbox");
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        options.addArguments("--remote-debugging-port=9222");
         WebDriver driver = new ChromeDriver(options);
         return driver;
     }
