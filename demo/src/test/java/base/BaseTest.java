@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 
 public class BaseTest {
 
@@ -49,8 +50,8 @@ public class BaseTest {
     }
 
 
-  /*  @AfterClass
+    @AfterClass
     public void closeBrowser(){
         driver.close();
-     }*/
+     }
 }
