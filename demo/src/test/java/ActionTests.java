@@ -19,7 +19,7 @@ public class ActionTests extends BaseTest {
 
     @Test
     public void dummyTest(){
-        System.out.println("inside test");
+        System.out.println("inside dummy test");
     }
 /*    @Test
     public void dragDropTest(){
