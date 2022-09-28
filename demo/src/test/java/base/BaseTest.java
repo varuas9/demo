@@ -16,7 +16,7 @@ public class BaseTest {
 //      System.out.println("browser is: "+ value);
        this.driver = driverSetup();
 //        multipleBrowserSetup(browserValue);
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         System.out.println("inside base test");
     }
 
@@ -43,9 +43,15 @@ public class BaseTest {
         System.out.println("inside base test driverSetup");
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
-//        options.addArguments("--remote-debugging-port=9444");
+        options.addArguments("--headless");
+//        options.addArguments("----disable-gpu");
+//        options.addArguments("start-maximized");
+//        options.addArguments("--disable-extensions");
+//        options.addArguments("disable-infobars");
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments(Arrays.asList("--window-position=0,0"));
+//        options.addArguments("--remote-debugging-port=9222");
 //        options.addArguments("--window-size=1920,1080");
         WebDriver driver = new ChromeDriver(options);
         return driver;
