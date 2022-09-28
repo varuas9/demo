@@ -18,17 +18,17 @@ public class ActionTests extends BaseTest {
     }
 
 
-  /*  @Test
+    @Test
     public void dummyTest(){
         System.out.println("inside dummy test");
-    }*/
-    @Test
+    }
+ /*   @Test
     public void dragDropTest(){
         driver.get("https://demoqa.com/droppable/");
         WebElement source = driver.findElement(By.id("draggable"));
         WebElement destination = driver.findElement(By.id("droppable"));
         actions.dragAndDrop(source,destination).perform();
-    }
+    }*/
 
     /*@Test (priority = 1)
     public void mouseHover(){
