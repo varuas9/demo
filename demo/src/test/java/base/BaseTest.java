@@ -43,8 +43,8 @@ public class BaseTest {
         System.out.println("inside base test driverSetup");
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
 //        options.addArguments("--remote-debugging-port=9444");
 //        options.addArguments("--window-size=1920,1080");
         WebDriver driver = new ChromeDriver(options);
