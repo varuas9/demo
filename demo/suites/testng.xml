@@ -3,11 +3,14 @@
 
 <suite name="suite1">
 
-    <test name="classes">
+    <test name="classes" parallel="tests" thread-count="2">
 <!--        <parameter name="browser" value="edge"/>-->
         <classes>
-<!--            <class name="FirstTest"/>-->
+            <class name="FirstTest"/>
             <class name="ActionTests"/>
+            <class name="elements.TextBoxTest"/>
+            <class name="RemainingTests"/>
+
         </classes>
     </test>
 

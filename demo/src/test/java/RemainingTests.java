@@ -29,6 +29,7 @@ public class RemainingTests extends BaseTest {
         driver.switchTo().window(windows.get(1));
         WaitUtils.waitForSeconds(2);
         driver.close();
+        driver.switchTo().window(windows.get(0));
     }
 
 
