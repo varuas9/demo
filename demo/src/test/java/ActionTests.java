@@ -18,10 +18,6 @@ public class ActionTests extends BaseTest {
     }
 
 
-/*    @Test
-    public void dummyTest(){
-        System.out.println("inside dummy test");
-    }*/
     @Test
     public void dragDropTest(){
         driver.get("https://demoqa.com/droppable/");

@@ -20,7 +20,7 @@ public class TextBoxTest extends BaseTest {
     }
 
     @Test
-    public void test1(){
+    public void textBoxTest(){
         //obj.enterInfoAndSubmit(driver);
         elements.fullName.sendKeys("myname");
         elements.email.sendKeys("email@gmail.com");
